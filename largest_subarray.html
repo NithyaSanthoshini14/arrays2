@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function subarrays(nums){
+            let finalarr=[]
+            for(i=0;i<nums.length;i++){
+                for(j=i;j<nums.length;j++){
+                    subarr=[]
+                    for(k=i;k<=j;k++){
+                        subarr.push(nums[k])
+                    }
+                    finalarr.push(subarr)
+                }
+            }
+            console.log(finalarr)
+           
+            largestarr=finalarr[0]
+            for(z=0;z<finalarr.length;z++){
+            if(finalarr[z].length>largestarr.length){
+                largestarr=finalarr[z]
+                var ind=finalarr.indexOf(largestarr)
+         }
+         
+            }
+            console.log(largestarr)
+            console.log(ind)
+
+         }
+
+        nums=[1,2,3]
+        console.log(subarrays(nums))
+
+        
+    </script>
+</body>
+</html>
